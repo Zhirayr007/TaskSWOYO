@@ -1,31 +1,6 @@
-//Масиив с элементами
-let data = [{
-	text: "Bamboo Watch",
-	img: "./img/bamboo-watch.jpg"
-},
-{
-	text: "Black Watch",
-	img: "./img/black-watch.jpg"
-},
-{
-	text: "Bracelet",
-	img: "./img/bracelet.jpg"
-},
-{
-	text: "Game Controller",
-	img: "./img/game-controller.jpg"
-},
-{
-	text: "Brown Purse",
-	img: "./img/brown-purse.jpg"
-},
-{
-	text: "Blue Band",
-	img: "./img/blue-band.jpg"
-}
-];
-// console.log(data);
-(function () {
+// Функция-конструктор
+function Control(data) {
+	this.data=data;
 	// тег контейнер
 	const wrapper = document.querySelector('.wrapper');
 	//SVG для кнопок
@@ -342,4 +317,33 @@ let data = [{
 	right.addEventListener("click", rightFunc);
 	leftAll.addEventListener("click", leftALLFunc);
 	rightAll.addEventListener("click", rightALLFunc);
-})()
+}
+
+
+const contr = new Control(
+	[{
+			text: "Bamboo Watch",
+			img: "./img/bamboo-watch.jpg"
+		},
+		{
+			text: "Black Watch",
+			img: "./img/black-watch.jpg"
+		},
+		{
+			text: "Bracelet",
+			img: "./img/bracelet.jpg"
+		},
+		{
+			text: "Game Controller",
+			img: "./img/game-controller.jpg"
+		},
+		{
+			text: "Brown Purse",
+			img: "./img/brown-purse.jpg"
+		},
+		{
+			text: "Blue Band",
+			img: "./img/blue-band.jpg"
+		}
+		]
+)
